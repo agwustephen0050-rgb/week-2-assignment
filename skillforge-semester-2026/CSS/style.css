@@ -1,0 +1,762 @@
+/* ===========================
+   GENERAL STYLING
+=========================== */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+header{
+    background-color: #002147;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    top: 0;
+    z-index: 1000;
+}
+
+
+/* ===========================
+   NAVIGATION
+=========================== */
+
+nav ul{
+    list-style: none;
+    display: flex;
+}
+
+nav ul li{
+    position: relative;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    padding: 15px 18px;
+    display: block;
+    transition: 0.3s;
+}
+
+nav ul li a:hover{
+    background-color: #f4b400;
+    color: #002147;
+}
+
+/* ===========================
+   DROPDOWN MENU
+=========================== */
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background: white;
+    min-width: 270px;
+    box-shadow: 0 5px 12px rgba(0,0,0,.2);
+}
+
+.dropdown-content li a{
+    color: #333;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+/* ===========================
+   HERO SECTION
+=========================== */
+
+.hero{
+
+height:90vh;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:20px;
+
+background:
+linear-gradient(rgba(0,33,71,.75),
+rgba(0,33,71,.75)),
+url("../images/hero.jpeg");
+
+background-size:cover;
+
+background-position:center;
+background-repeat: no-repeat;
+color:white;
+
+}
+.hero h2{
+    font-size: 48px;
+}
+
+.hero p{
+    margin: 20px 0;
+    font-size: 22px;
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.btn{
+    display: inline-block;
+    background: #f4b400;
+    color: #002147;
+    text-decoration: none;
+    padding: 15px 35px;
+    border-radius: 40px;
+    font-weight: bold;
+    transition: 4s;
+}
+
+.btn:hover{
+    
+    transform: translateY(-5px);
+    box-shadow:0 8px 15px rgba(0,0,0,.3);
+}
+
+/* ===========================
+   SECTIONS
+=========================== */
+
+section{
+    padding: 70px 8%;
+}
+
+section h2{
+    color: #002147;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+section p{
+    text-align: center;
+}
+
+/* ===========================
+   PROGRAM CARDS
+=========================== */
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.card{
+    background: white;
+    padding: 35px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 12px rgba(0,0,0,.15);
+    transition: .4s;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+}
+
+.card h3{
+    color: #002147;
+}
+
+/* ===========================
+   CALL TO ACTION
+=========================== */
+
+.cta{
+    background: #002147;
+    color: white;
+    text-align: center;
+}
+
+.cta h2{
+    color: white;
+}
+
+.cta p{
+    margin-bottom: 25px;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ===========================
+   STATISTICS SECTION
+=========================== */
+
+.statistics{
+    background:#002147;
+    color:white;
+}
+
+.statistics .card{
+    background:white;
+}
+
+.statistics h2{
+    font-size:45px;
+    color:#f4b400;
+}
+
+.statistics p{
+    color:#333;
+}
+
+/* ===========================
+   HIGHLIGHTS & BENEFITS
+=========================== */
+
+.highlights,
+.benefits{
+    background:#ffffff;
+}
+
+/* ===========================
+   TABLE
+=========================== */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:30px;
+}
+
+table,th,td{
+    border:1px solid #ddd;
+}
+
+th{
+    background:#002147;
+    color:white;
+}
+
+th,td{
+    padding:15px;
+    text-align:left;
+}
+
+tr:nth-child(even){
+    background:#f2f2f2;
+}
+/* ===========================
+   PROGRAMME SECTIONS
+=========================== */
+
+section[id]{
+
+    background:white;
+
+    margin:40px auto;
+
+    width:90%;
+
+    border-radius:12px;
+
+    padding:40px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+}
+
+section[id] h2{
+
+    color:#002147;
+
+    margin-bottom:20px;
+
+}
+
+section[id] p{
+
+    text-align:justify;
+
+    font-size:18px;
+
+}
+
+/* ===========================
+   PROGRAMME ACTIVITY LISTS
+=========================== */
+
+section[id] ul{
+    margin-top:20px;
+    padding-left:30px;
+}
+
+section[id] li{
+    margin:10px 0;
+    font-size:17px;
+}
+
+section[id] h3{
+    color:#f4b400;
+    margin-top:25px;
+    margin-bottom:15px;
+}
+
+/* ===========================
+   FORM
+=========================== */
+
+form{
+
+    width:80%;
+
+    margin:auto;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:10px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+}
+
+label{
+
+    display:block;
+
+    margin-top:20px;
+
+    font-weight:bold;
+
+}
+
+input,
+select{
+
+    width:100%;
+
+    padding:12px;
+
+    margin-top:8px;
+
+    border:1px solid #ccc;
+
+    border-radius:6px;
+
+    font-size:16px;
+
+}
+
+input:focus,
+select:focus{
+
+    outline:none;
+
+    border:2px solid #002147;
+
+}
+
+input[type="checkbox"]{
+
+    width:auto;
+
+    margin-right:10px;
+
+}
+
+input[type="submit"]{
+
+    border:none;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+}
+
+form h3{
+
+    color:#002147;
+
+    margin-top:35px;
+
+    margin-bottom:20px;
+
+    border-left:6px solid gold;
+
+    padding-left:10px;
+
+}
+
+textarea{
+
+    width:100%;
+
+    padding:12px;
+
+    border-radius:6px;
+
+    border:1px solid #ccc;
+
+    resize:vertical;
+
+}
+
+input[type=file]{
+
+    padding:10px;
+
+    background:#f5f5f5;
+
+}
+
+input[type=submit]{
+
+    width:100%;
+
+    margin-top:25px;
+
+    background:#002147;
+
+    color:white;
+
+}
+
+input[type=submit]:hover{
+
+    background:gold;
+
+    color:#002147;
+
+}
+.portal-header{
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+}
+
+.portal-header h2{
+
+    color:#002147;
+
+    font-size:34px;
+
+}
+
+.portal-header p{
+
+    color:#666;
+
+}
+
+/* ===========================
+NOTICE BOARD
+=========================== */
+
+.notice{
+
+background:#fff8dc;
+
+border-left:8px solid gold;
+
+padding:25px;
+
+margin:40px auto;
+
+width:90%;
+
+border-radius:8px;
+
+}
+
+.notice h2{
+
+color:#002147;
+
+margin-bottom:15px;
+
+}
+
+.notice ul{
+
+padding-left:25px;
+
+}
+
+.notice li{
+
+margin:10px 0;
+
+}
+
+/* ===========================
+STEPS
+=========================== */
+
+.steps{
+
+display:flex;
+
+justify-content:center;
+
+gap:30px;
+
+margin:40px;
+
+}
+
+.step{
+
+background:#ddd;
+
+padding:20px;
+
+border-radius:10px;
+
+width:180px;
+
+text-align:center;
+
+font-weight:bold;
+
+}
+
+.active{
+
+background:#002147;
+
+color:white;
+
+}
+
+/* ===========================
+HELP
+=========================== */
+
+.help{
+
+background:white;
+
+margin-top:50px;
+
+padding:35px;
+
+border-radius:10px;
+
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+}
+
+.help h2{
+
+color:#002147;
+
+margin-bottom:20px;
+
+}
+
+.logo-area{
+
+text-align:center;
+
+margin:15px;
+
+}
+
+.logo-area img{
+
+width:80px;
+
+height:80px;
+
+margin-bottom:15px;
+
+}
+/* ===========================
+SCHEDULE TABLE
+=========================== */
+
+table{
+
+width:100%;
+
+margin-top:30px;
+
+border-collapse:collapse;
+
+background:white;
+
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+}
+
+th{
+
+background:#002147;
+
+color:white;
+
+padding:15px;
+
+}
+
+td{
+
+padding:15px;
+
+text-align:center;
+
+}
+
+tr:nth-child(even){
+
+background:#f7f7f7;
+
+}
+
+tr:hover{
+
+background:#fff8dc;
+
+transition:.3s;
+
+}
+/* ===========================
+FOOTER
+=========================== */
+
+.footer-content{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:30px;
+
+margin-bottom:30px;
+
+}
+
+.footer-content h3{
+
+margin-bottom:15px;
+
+color:#FFD700;
+
+}
+
+.footer-content p{
+
+margin:8px 0;
+
+}
+
+footer hr{
+
+margin:20px 0;
+
+border:1px solid #444;
+
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    line-height:1.7;
+    background:#f5f7fa;
+    color:#333;
+}
+header{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    background:#002147;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:5px 5%;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+
+}
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+.card img{
+
+width:100%;
+
+height:220px;
+
+object-fit:cover;
+
+}
+/* ==========================
+   HEADER LOGO
+========================== */
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img{
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.logo-text h1{
+    color: white;
+    font-size: 12px;
+    margin: 0;
+    line-height: 1.0;
+}
+
+.logo-text p{
+    color: #FFD700;
+    font-size: 12px;
+    margin-top: 4px;
+}
